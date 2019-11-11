@@ -1,0 +1,46 @@
+{
+  "name": "icarus/worker",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "description": "A wrapper for running tasks with automatic exception logging and programmable post-run actions (like flushing to the database, logging an action).",
+  "keywords": [
+    "PHP",
+    "Worker"
+  ],
+  "authors": [
+    {
+      "name": "Pavel Gajdoš",
+      "email": "info@pavelgajdos.cz"
+    },
+    {
+      "name": "Icarus s.r.o",
+      "homepage": "http://icarus.cz"
+    }
+  ],
+  "require": {
+    "php": ">=7.3",
+    "contributte/event-dispatcher": "^0.6.0",
+    "tracy/tracy": "^2.7"
+  },
+  "require-dev": {
+    "nette/tester": "^2.2",
+    "mockery/mockery": "^1.0@dev"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "platform": {
+      "php": "7.3"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Icarus\\Worker\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "IcarusTests\\": "tests/"
+    }
+  }
+}
